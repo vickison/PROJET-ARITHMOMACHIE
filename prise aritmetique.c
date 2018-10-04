@@ -1,0 +1,305 @@
+#include<graphics.h>
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<windows.h>
+#include"headers.h"
+
+extern int A[8][16];
+extern int B[8][16];
+
+void prise_ar(int ec1i,int ec1j,int ec2i,int ec2j)
+{
+    //un triangle mange cher ami
+    if((B[ec1i][ec1j]==-tr)&&(B[ec1i-2][ec1j]>0)&&((B[ec1i-1][ec1j-1]==-ce)||(B[ec1i-1][ec1j+1]==-ce)||(B[ec1i-3][ec1j-1]==-ce)||(B[ec1i-3][ec1i+1]==-ce))||
+       ((B[ec1i][ec1j]==tr)&&(B[ec1i-2][ec1j]<0))&&((B[ec1i-1][ec1j-1]==ce)||(B[ec1i-1][ec1j+1]==ce)||(B[ec1i-3][ec1j-1]==ce)||(B[ec1i-3][ec1i+1]==ce)))
+    {
+        if(((A[ec1i][ec1j]+A[ec1i-1][ec1j-1]==A[ec1i-2][ec1j])||(A[ec1i][ec1j]+A[ec1i-1][ec1j+1]==A[ec1i-2][ec1j])||
+            (A[ec1i][ec1j]+A[ec1i-3][ec1j-1]==A[ec1i-2][ec1j])||(A[ec1i][ec1j]+A[ec1i-3][ec1j+1]==A[ec1i-2][ec1j])||
+            (A[ec1i-2][ec1j]-A[ec1i-1][ec1j-1]==A[ec1i][ec1j])||(A[ec1i-2][ec1j]-A[ec1i-1][ec1j+1]==A[ec1i][ec1j])||
+            (A[ec1i-2][ec1j]-A[ec1i-3][ec1j-1]==A[ec1i][ec1j])||(A[ec1i-2][ec1j]-A[ec1i-3][ec1j+1]==A[ec1i][ec1j])||
+            (A[ec1i][ec1j]==A[ec1i-2][ec1j])))
+        {
+         A[ec2i][ec2j]=A[ec1i][ec1j];
+         A[ec1i][ec1j]=0;
+         B[ec2i][ec2j]=B[ec1i][ec1j];
+         B[ec1i][ec1j]=0;
+        }
+    }
+    if((B[ec1i][ec1j]==-tr)&&(B[ec1i-2][ec1j]>0)&&((B[ec1i-2][ec1j-2]=-tr)||(B[ec1i-4][ec1j]=-tr)||(B[ec1i-2][ec1j+2]=-tr)))
+        {
+            if(((A[ec1i][ec1j]+A[ec1i-2][ec1j-2]==A[ec1i-2][ec1j])||(A[ec1i][ec1j]+A[ec1i-4][ec1j]==A[ec1i-2][ec1j]))||
+                ((A[ec1i-2][ec1j]-A[ec1i-2][ec1j-2]==A[ec1i][ec1j])||(A[ec1i-2][ec1j]-A[ec1i-4][ec1j]==A[ec1i][ec1j]))||
+                ((A[ec1i][ec1j]==A[ec1i-2][ec1j])))
+            {
+         A[ec2i][ec2j]=A[ec1i][ec1j];
+         A[ec1i][ec1j]=0;
+         B[ec2i][ec2j]=B[ec1i][ec1j];
+         B[ec1i][ec1j]=0;
+            }
+        }
+    if((B[ec1i][ec1j]==-tr)&&(B[ec1i-2][ec1j]>0)&&((B[ec1i-2][ec1j-3]=-ca)||(B[ec1i-5][ec1j]=-ca)||(B[ec1i-2][ec1j+3]==-ca))||
+      ((B[ec1i][ec1j]==tr)&&(B[ec1i-2][ec1j]<0)&&((B[ec1i-2][ec1j-3]=ca)||(B[ec1i-5][ec1j]=ca)||(B[ec1i-2][ec1j+3]==ca))))
+        {
+            if(((A[ec1i][ec1j]+A[ec1i-2][ec1j-3]==A[ec1i-2][ec1j])||(A[ec1i][ec1j]+A[ec1i-5][ec1j]==A[ec1i-2][ec1j]))||
+                ((A[ec1i][ec1j]-A[ec1i-2][ec1j-3]==A[ec1i-2][ec1j])||(A[ec1i-2][ec1j-3]-A[ec1i][ec1j]==A[ec1i-2][ec1j]))||((A[ec1i][ec1j]-A[ec1i-5][ec1j]==A[ec1i-2][ec1j])||(A[ec1i-5][ec1j]-A[ec1i][ec1j]==A[ec1i-2][ec1j]))||
+                ((A[ec1i][ec1j]==A[ec1i-2][ec1j])))
+            {
+         A[ec2i][ec2j]=A[ec1i][ec1j];
+         A[ec1i][ec1j]=0;
+         B[ec2i][ec2j]=B[ec1i][ec1j];
+         B[ec1i][ec1j]=0;
+            }
+        }
+
+    if((B[ec1i][ec1j]==-tr)&&(B[ec1i+2][ec1j]>0)&&((B[ec1i+1][ec1j-1]==-ce)||(B[ec1i+1][ec1j+1]==-ce)||(B[ec1i+3][ec1j-1]==-ce)||(B[ec1i+3][ec1i+1]==-ce))||
+       ((B[ec1i][ec1j]==tr)&&(B[ec1i+2][ec1j]<0))&&((B[ec1i+1][ec1j-1]==ce)||(B[ec1i+1][ec1j+1]==ce)||(B[ec1i+3][ec1j-1]==ce)||(B[ec1i+3][ec1i+1]==ce)))
+        {
+        if(((A[ec1i][ec1j]+A[ec1i+1][ec1j-1]==A[ec1i+2][ec1j])||(A[ec1i][ec1j]+A[ec1i+1][ec1j+1]==A[ec1i+2][ec1j])||
+            (A[ec1i][ec1j]+A[ec1i+3][ec1j-1]==A[ec1i+2][ec1j])||(A[ec1i][ec1j]+A[ec1i+3][ec1j+1]==A[ec1i+2][ec1j])||
+            (A[ec1i][ec1j]-A[ec1i+1][ec1j-1]==A[ec1i+2][ec1j])||(A[ec1i][ec1j]-A[ec1i+1][ec1j+1]==A[ec1i+2][ec1j])||
+            (A[ec1i][ec1j]-A[ec1i+3][ec1j-1]==A[ec1i+2][ec1j])||(A[ec1i][ec1j]-A[ec1i+3][ec1j+1]==A[ec1i+2][ec1j])||
+            (A[ec1i][ec1j]==A[ec1i+2][ec1j])))
+        {
+         A[ec2i][ec2j]=A[ec1i][ec1j];
+         A[ec1i][ec1j]=0;
+         B[ec2i][ec2j]=B[ec1i][ec1j];
+         B[ec1i][ec1j]=0;
+        }
+    }
+    if((B[ec1i][ec1j]==-tr)&&(B[ec1i+2][ec1j]>0)&&((B[ec1i+2][ec1j-2]=-tr)||(B[ec1i+4][ec1j]=-tr)||(B[ec1i+2][ec1j+2]=-tr)))
+        {
+            if(((A[ec1i][ec1j]+A[ec1i+2][ec1j-2]==A[ec1i+2][ec1j])||(A[ec1i][ec1j]+A[ec1i+2][ec1j+2]==A[ec1i+2][ec1j])||(A[ec1i][ec1j]+A[ec1i+4][ec1j]==A[ec1i+2][ec1j]))||
+                ((A[ec1i][ec1j]-A[ec1i+2][ec1j-2]==A[ec1i+2][ec1j])||(A[ec1i][ec1j]-A[ec1i+2][ec1j+2]==A[ec1i+2][ec1j])||(A[ec1i][ec1j]-A[ec1i+4][ec1j]==A[ec1i+2][ec1j]))||
+                ((A[ec1i][ec1j]==A[ec1i-2][ec1j])))
+            {
+         A[ec2i][ec2j]=A[ec1i][ec1j];
+         A[ec1i][ec1j]=0;
+         B[ec2i][ec2j]=B[ec1i][ec1j];
+         B[ec1i][ec1j]=0;
+            }
+        }
+    if((B[ec1i][ec1j]==-tr)&&(B[ec1i+2][ec1j]>0)&&((B[ec1i+2][ec1j-3]=-ca)||(B[ec1i+5][ec1j]=-ca)||(B[ec1i+2][ec1j+3]==-ca))||
+      ((B[ec1i][ec1j]==tr)&&(B[ec1i+2][ec1j]<0)&&((B[ec1i+2][ec1j-3]=ca)||(B[ec1i+5][ec1j]=ca)||(B[ec1i+2][ec1j+3]==ca))))
+        {
+            if(((A[ec1i][ec1j]+A[ec1i+2][ec1j-3]==A[ec1i+2][ec1j])||(A[ec1i][ec1j]+A[ec1i+5][ec1j]==A[ec1i+2][ec1j]))||
+               ((A[ec1i][ec1j]-A[ec1i+2][ec1j-3]==A[ec1i+2][ec1j])||(A[ec1i+2][ec1j-3]-A[ec1i][ec1j]==A[ec1i+2][ec1j]))||((A[ec1i][ec1j]-A[ec1i+5][ec1j]==A[ec1i+2][ec1j])||(A[ec1i+5][ec1j]-A[ec1i][ec1j]==A[ec1i+2][ec1j]))||
+              ((A[ec1i][ec1j]==A[ec1i+2][ec1j])))
+            {
+         A[ec2i][ec2j]=A[ec1i][ec1j];
+         A[ec1i][ec1j]=0;
+         B[ec2i][ec2j]=B[ec1i][ec1j];
+         B[ec1i][ec1j]=0;
+            }
+        }
+
+
+        //
+        if((B[ec1i][ec1j]==-tr)&&(B[ec1i-2][ec1j]>0)&&((B[ec1i-1][ec1j-1]==-ce)||(B[ec1i-1][ec1j+1]==-ce)||(B[ec1i-3][ec1j-1]==-ce)||(B[ec1i-3][ec1i+1]==-ce))||
+       ((B[ec1i][ec1j]==tr)&&(B[ec1i-2][ec1j]<0))&&((B[ec1i-1][ec1j-1]==ce)||(B[ec1i-1][ec1j+1]==ce)||(B[ec1i-3][ec1j-1]==ce)||(B[ec1i-3][ec1i+1]==ce)))
+    {
+        if(((A[ec1i][ec1j]+A[ec1i-1][ec1j-1]==A[ec1i-2][ec1j])||(A[ec1i][ec1j]+A[ec1i-1][ec1j+1]==A[ec1i-2][ec1j])||
+            (A[ec1i][ec1j]+A[ec1i-3][ec1j-1]==A[ec1i-2][ec1j])||(A[ec1i][ec1j]+A[ec1i-3][ec1j+1]==A[ec1i-2][ec1j])||
+            (A[ec1i-2][ec1j]-A[ec1i-1][ec1j-1]==A[ec1i][ec1j])||(A[ec1i-2][ec1j]-A[ec1i-1][ec1j+1]==A[ec1i][ec1j])||
+            (A[ec1i-2][ec1j]-A[ec1i-3][ec1j-1]==A[ec1i][ec1j])||(A[ec1i-2][ec1j]-A[ec1i-3][ec1j+1]==A[ec1i][ec1j])||
+            (A[ec1i][ec1j]==A[ec1i-2][ec1j])))
+        {
+         A[ec2i][ec2j]=A[ec1i][ec1j];
+         A[ec1i][ec1j]=0;
+         B[ec2i][ec2j]=B[ec1i][ec1j];
+         B[ec1i][ec1j]=0;
+        }
+    }
+    if((B[ec1i][ec1j]==-tr)&&(B[ec1i-2][ec1j]>0)&&((B[ec1i-2][ec1j-2]=-tr)||(B[ec1i-4][ec1j]=-tr)||(B[ec1i-2][ec1j+2]=-tr)))
+        {
+            if(((A[ec1i][ec1j]+A[ec1i-2][ec1j-2]==A[ec1i-2][ec1j])||(A[ec1i][ec1j]+A[ec1i-4][ec1j]==A[ec1i-2][ec1j]))||
+                ((A[ec1i-2][ec1j]-A[ec1i-2][ec1j-2]==A[ec1i][ec1j])||(A[ec1i-2][ec1j]-A[ec1i-4][ec1j]==A[ec1i][ec1j]))||
+                ((A[ec1i][ec1j]==A[ec1i-2][ec1j])))
+            {
+         A[ec2i][ec2j]=A[ec1i][ec1j];
+         A[ec1i][ec1j]=0;
+         B[ec2i][ec2j]=B[ec1i][ec1j];
+         B[ec1i][ec1j]=0;
+            }
+        }
+    if((B[ec1i][ec1j]==-tr)&&(B[ec1i-2][ec1j]>0)&&((B[ec1i-2][ec1j-3]=-ca)||(B[ec1i-5][ec1j]=-ca)||(B[ec1i-2][ec1j+3]==-ca))||
+      ((B[ec1i][ec1j]==tr)&&(B[ec1i-2][ec1j]<0)&&((B[ec1i-2][ec1j-3]=ca)||(B[ec1i-5][ec1j]=ca)||(B[ec1i-2][ec1j+3]==ca))))
+        {
+            if(((A[ec1i][ec1j]+A[ec1i-2][ec1j-3]==A[ec1i-2][ec1j])||(A[ec1i][ec1j]+A[ec1i-5][ec1j]==A[ec1i-2][ec1j]))||
+                ((A[ec1i][ec1j]-A[ec1i-2][ec1j-3]==A[ec1i-2][ec1j])||(A[ec1i-2][ec1j-3]-A[ec1i][ec1j]==A[ec1i-2][ec1j]))||((A[ec1i][ec1j]-A[ec1i-5][ec1j]==A[ec1i-2][ec1j])||(A[ec1i-5][ec1j]-A[ec1i][ec1j]==A[ec1i-2][ec1j]))||
+                ((A[ec1i][ec1j]==A[ec1i-2][ec1j])))
+            {
+         A[ec2i][ec2j]=A[ec1i][ec1j];
+         A[ec1i][ec1j]=0;
+         B[ec2i][ec2j]=B[ec1i][ec1j];
+         B[ec1i][ec1j]=0;
+            }
+        }
+
+    // un carre mange cher ami
+
+    if((B[ec1i][ec1j]==-ca)&&(B[ec1i-3][ec1j]>0)&&((B[ec1i-2][ec1j-2]==-ce)||(B[ec1i-2][ec1j+2]==-ce)||(B[ec1i-4][ec1j-1]==-ce)||(B[ec1i-4][ec1i+1]==-ce))||
+      ((B[ec1i][ec1j]==ca)&&(B[ec1i-3][ec1j]<0))&&((B[ec1i-2][ec1j-2]==ce)||(B[ec1i-2][ec1j+2]==ce)||(B[ec1i-4][ec1j-1]==ce)||(B[ec1i-4][ec1i+1]==ce)))
+    {
+        if(((A[ec1i][ec1j]+A[ec1i-2][ec1j-2]==A[ec1i-3][ec1j])||(A[ec1i][ec1j]+A[ec1i-2][ec1j+2]==A[ec1i-3][ec1j])||
+            (A[ec1i][ec1j]+A[ec1i-4][ec1j-1]==A[ec1i-3][ec1j])||(A[ec1i][ec1j]+A[ec1i-4][ec1j+1]==A[ec1i-3][ec1j])||
+            (A[ec1i][ec1j]-A[ec1i-2][ec1j-2]==A[ec1i-3][ec1j])||(A[ec1i][ec1j]-A[ec1i-1][ec1j+1]==A[ec1i-3][ec1j])||
+            (A[ec1i][ec1j]-A[ec1i-4][ec1j-1]==A[ec1i-3][ec1j])||(A[ec1i][ec1j]-A[ec1i-4][ec1j+1]==A[ec1i-3][ec1j])||
+            (A[ec1i][ec1j]==A[ec1i-3][ec1j])))
+        {
+         A[ec2i][ec2j]=A[ec1i][ec1j];
+         A[ec1i][ec1j]=0;
+         B[ec2i][ec2j]=B[ec1i][ec1j];
+         B[ec1i][ec1j]=0;
+        }
+    }
+    if((B[ec1i][ec1j]==-ca)&&(B[ec1i-3][ec1j]>0)&&((B[ec1i-2][ec1j-3]=-tr)||(B[ec1i-5][ec1j]=-tr)||(B[ec1i-2][ec1j+3]=-tr))||
+       (B[ec1i][ec1j]==ca)&&(B[ec1i-3][ec1j]<0)&&((B[ec1i-2][ec1j-3]=tr)||(B[ec1i-5][ec1j]=tr)||(B[ec1i-2][ec1j+3]=tr)))
+        {
+             if(((A[ec1i][ec1j]+A[ec1i-2][ec1j-3]==A[ec1i-3][ec1j])||(A[ec1i][ec1j]+A[ec1i-5][ec1j]==A[ec1i-3][ec1j]))||
+                ((A[ec1i][ec1j]-A[ec1i-2][ec1j-3]==A[ec1i-3][ec1j])||(A[ec1i][ec1j]-A[ec1i-5][ec1j]==A[ec1i-3][ec1j]))||
+                ((A[ec1i][ec1j]==A[ec1i-3][ec1j])))
+            {
+         A[ec2i][ec2j]=A[ec1i][ec1j];
+         A[ec1i][ec1j]=0;
+         B[ec2i][ec2j]=B[ec1i][ec1j];
+         B[ec1i][ec1j]=0;
+            }
+        }
+    if((B[ec1i][ec1j]==-ca)&&(B[ec1i-3][ec1j]>0)&&((B[ec1i-3][ec1j-3]=-ca)||(B[ec1i-6][ec1j]=-ca)||(B[ec1i-3][ec1j+3]==-ca))||
+      ((B[ec1i][ec1j]==ca)&&(B[ec1i-3][ec1j]<0)&&((B[ec1i-3][ec1j-3]=ca)||(B[ec1i-6][ec1j]=ca)||(B[ec1i-3][ec1j+3]==ca))))
+        {
+             if(((A[ec1i][ec1j]+A[ec1i-3][ec1j-3]==A[ec1i-3][ec1j])||(A[ec1i][ec1j]+A[ec1i-6][ec1j]==A[ec1i-3][ec1j]))||
+                ((A[ec1i][ec1j]-A[ec1i-3][ec1j-3]==A[ec1i-3][ec1j])||(A[ec1i-3][ec1j-3]-A[ec1i][ec1j]==A[ec1i-3][ec1j]))||((A[ec1i][ec1j]-A[ec1i-6][ec1j]==A[ec1i-3][ec1j])||(A[ec1i-5][ec1j]-A[ec1i][ec1j]==A[ec1i-3][ec1j]))||
+                ((A[ec1i][ec1j]==A[ec1i-2][ec1j])))
+            {
+         A[ec2i][ec2j]=A[ec1i][ec1j];
+         A[ec1i][ec1j]=0;
+         B[ec2i][ec2j]=B[ec1i][ec1j];
+         B[ec1i][ec1j]=0;
+            }
+        }
+
+
+    if((B[ec1i][ec1j]==-ca)&&(B[ec1i+3][ec1j]>0)&&((B[ec1i+2][ec1j-2]==-ce)||(B[ec1i-2][ec1j+2]==-ce)||(B[ec1i+4][ec1j-1]==-ce)||(B[ec1i+4][ec1i+1]==-ce))||
+      ((B[ec1i][ec1j]==ca)&&(B[ec1i+3][ec1j]<0))&&((B[ec1i+2][ec1j-2]==ce)||(B[ec1i-2][ec1j+2]==ce)||(B[ec1i+4][ec1j-1]==ce)||(B[ec1i+4][ec1i+1]==ce)))
+    {
+        if(((A[ec1i][ec1j]+A[ec1i+2][ec1j-2]==A[ec1i+3][ec1j])||(A[ec1i][ec1j]+A[ec1i+2][ec1j+2]==A[ec1i+3][ec1j])||
+            (A[ec1i][ec1j]+A[ec1i+4][ec1j-1]==A[ec1i+3][ec1j])||(A[ec1i][ec1j]+A[ec1i+4][ec1j+1]==A[ec1i+3][ec1j])||
+            (A[ec1i][ec1j]-A[ec1i+2][ec1j-2]==A[ec1i+3][ec1j])||(A[ec1i][ec1j]-A[ec1i+1][ec1j+1]==A[ec1i+3][ec1j])||
+            (A[ec1i][ec1j]-A[ec1i+4][ec1j-1]==A[ec1i+3][ec1j])||(A[ec1i][ec1j]-A[ec1i+4][ec1j+1]==A[ec1i+3][ec1j])||
+            (A[ec1i][ec1j]==A[ec1i+3][ec1j])))
+        {
+         A[ec2i][ec2j]=A[ec1i][ec1j];
+         A[ec1i][ec1j]=0;
+         B[ec2i][ec2j]=B[ec1i][ec1j];
+         B[ec1i][ec1j]=0;
+        }
+    }
+    if((B[ec1i][ec1j]==-ca)&&(B[ec1i+3][ec1j]>0)&&((B[ec1i+2][ec1j-3]=-tr)||(B[ec1i+5][ec1j]=-tr)||(B[ec1i+2][ec1j+3]=-tr))||
+       (B[ec1i][ec1j]==ca)&&(B[ec1i+3][ec1j]<0)&&((B[ec1i+2][ec1j-3]=tr)||(B[ec1i+5][ec1j]=tr)||(B[ec1i+2][ec1j+3]=tr)))
+        {
+             if(((A[ec1i][ec1j]+A[ec1i+2][ec1j-3]==A[ec1i+3][ec1j])||(A[ec1i][ec1j]+A[ec1i+5][ec1j]==A[ec1i+3][ec1j]))||
+                ((A[ec1i][ec1j]-A[ec1i+2][ec1j-3]==A[ec1i+3][ec1j])||(A[ec1i][ec1j]-A[ec1i+5][ec1j]==A[ec1i+3][ec1j]))||
+                ((A[ec1i][ec1j]==A[ec1i+3][ec1j])))
+            {
+         A[ec2i][ec2j]=A[ec1i][ec1j];
+         A[ec1i][ec1j]=0;
+         B[ec2i][ec2j]=B[ec1i][ec1j];
+         B[ec1i][ec1j]=0;
+            }
+        }
+    if((B[ec1i][ec1j]==-ca)&&(B[ec1i+3][ec1j]>0)&&((B[ec1i+3][ec1j-3]=-ca)||(B[ec1i+6][ec1j]=-ca)||(B[ec1i+3][ec1j+3]==-ca))||
+      ((B[ec1i][ec1j]==ca)&&(B[ec1i+3][ec1j]<0)&&((B[ec1i+3][ec1j-3]=ca)||(B[ec1i+6][ec1j]=ca)||(B[ec1i+3][ec1j+3]==ca))))
+        {
+             if(((A[ec1i][ec1j]+A[ec1i+3][ec1j-3]==A[ec1i+3][ec1j])||(A[ec1i][ec1j]+A[ec1i+6][ec1j]==A[ec1i+3][ec1j]))||
+                ((A[ec1i][ec1j]-A[ec1i+3][ec1j-3]==A[ec1i+3][ec1j])||(A[ec1i+3][ec1j-3]-A[ec1i][ec1j]==A[ec1i+3][ec1j]))||((A[ec1i][ec1j]-A[ec1i+6][ec1j]==A[ec1i+3][ec1j])||(A[ec1i+5][ec1j]-A[ec1i][ec1j]==A[ec1i+3][ec1j]))||
+                ((A[ec1i][ec1j]==A[ec1i+2][ec1j])))
+            {
+         A[ec2i][ec2j]=A[ec1i][ec1j];
+         A[ec1i][ec1j]=0;
+         B[ec2i][ec2j]=B[ec1i][ec1j];
+         B[ec1i][ec1j]=0;
+            }
+        }
+
+    //un cercle mange cher ami
+    if((B[ec1i][ec1j]==-ce)&&((B[ec1i-1][ec1j+1]>0)||(B[ec1i-1][ec1j-1]==-ce))&&(((B[ec1i-1][ec1j-2]==-ce)||(B[ec1i-2][ec1j]==-ce)||(B[ec1i-1][ec1j+1]==-ce)||(B[ec1i][ec1j-2]==-ce)))||
+       (B[ec1i][ec1j]==ce)&&((B[ec1i-1][ec1j+1]<0)||(B[ec1i-1][ec1j-1]==ce))&&(((B[ec1i-1][ec1j-2]==ce)||(B[ec1i-2][ec1j]==ce)||(B[ec1i-1][ec1j+1]==ce)||((B[ec1i][ec1j-2]==ce)))))
+       {
+           if((A[ec1i][ec1j]+A[ec1i-2][ec1j-2]==A[ec1i-1][ec1j-1])||((A[ec1i][ec1j]+A[ec1i-2][ec1j]==A[ec1i-1][ec1j-1])||(A[ec1i][ec1j]+A[ec1i-2][ec1j-2]==A[ec1i-1][ec1j+1])||
+            (A[ec1i][ec1j]+A[ec1i-2][ec1j+2]==A[ec1i-1][ec1j+1])||(A[ec1i][ec1j]+A[ec1i][ec1j-2]==A[ec1i-1][ec1j-1])||(A[ec1i][ec1j]+A[ec1i][ec1j+2]==A[ec1i-1][ec1j+1])))
+           {
+                 A[ec2i][ec2j]=A[ec1i][ec1j];
+                 A[ec1i][ec1j]=0;
+                 B[ec2i][ec2j]=B[ec1i][ec1j];
+                 B[ec1i][ec1j]=0;
+           }
+       }
+
+   if((B[ec1i][ec1j]==-ce)&&((B[ec1i-1][ec1j+1]>0)||(B[ec1i-1][ec1j-3]==-tr))&&(((B[ec1i-3][ec1j-1]==-tr)||(B[ec1i-2][ec1j]==-ce)||(B[ec1i-1][ec1j+1]==-ce)||(B[ec1i][ec1j-2]==-ce)))||
+       (B[ec1i][ec1j]==ce)&&((B[ec1i-1][ec1j+1]<0)||(B[ec1i-1][ec1j-3]==tr))&&(((B[ec1i-1][ec1j-2]==tr)||(B[ec1i-2][ec1j]==ce)||(B[ec1i-1][ec1j+1]==ce)||((B[ec1i][ec1j-2]==ce)))))
+       {
+           if((A[ec1i][ec1j]+A[ec1i-2][ec1j-2]==A[ec1i-1][ec1j-1])||((A[ec1i][ec1j]+A[ec1i-2][ec1j]==A[ec1i-1][ec1j-1])||(A[ec1i][ec1j]+A[ec1i-2][ec1j-2]==A[ec1i-1][ec1j+1])||
+            (A[ec1i][ec1j]+A[ec1i-2][ec1j+2]==A[ec1i-1][ec1j+1])||(A[ec1i][ec1j]+A[ec1i][ec1j-2]==A[ec1i-1][ec1j-1])||(A[ec1i][ec1j]+A[ec1i][ec1j+2]==A[ec1i-1][ec1j+1])))
+           {
+                 A[ec2i][ec2j]=A[ec1i][ec1j];
+                 A[ec1i][ec1j]=0;
+                 B[ec2i][ec2j]=B[ec1i][ec1j];
+                 B[ec1i][ec1j]=0;
+           }
+       }
+
+    if((B[ec1i][ec1j]==-ce)&&((B[ec1i-1][ec1j+1]>0)||(B[ec1i-1][ec1j-1]>0))&&((B[ec1i-1][ec1j-4]==-ca)||(B[ec1i-4][ec1j-1]==-ca)||(B[ec1i-4][ec1j+1]==-ca)||(B[ec1i-1][ec1j+4]==-ca))||
+       ((B[ec1i][ec1j]==ce)&&((B[ec1i-1][ec1j+1]<0)||(B[ec1i-1][ec1j-1]<0))&&((B[ec1i-1][ec1j-4]==ca)||(B[ec1i-4][ec1j-1]==ca)||(B[ec1i-4][ec1j+1]==ca)||(B[ec1i-1][ec1j+4]==ca))))
+       {
+           if((A[ec1i][ec1j]+A[ec1i-1][ec1j-4]==A[ec1i-1][ec1j-1])||(A[ec1i][ec1j]+A[ec1i-4][ec1j+1]==A[ec1i-1][ec1j-1])||(A[ec1i][ec1j]+A[ec1i-4][ec1j-1]==A[ec1i-1][ec1j-1])||(A[ec1i][ec1j]+A[ec1i-1][ec1j+4]==A[ec1i-1][ec1j+1]))
+           {
+                 A[ec2i][ec2j]=A[ec1i][ec1j];
+                 A[ec1i][ec1j]=0;
+                 B[ec2i][ec2j]=B[ec1i][ec1j];
+                 B[ec1i][ec1j]=0;
+           }
+       }
+
+
+    if((B[ec1i][ec1j]==-ce)&&((B[ec1i+1][ec1j+1]>0)||(B[ec1i+1][ec1j-1]==-ce))&&(((B[ec1i+1][ec1j-2]==-ce)||(B[ec1i+2][ec1j]==-ce)||(B[ec1i+1][ec1j+1]==-ce)||(B[ec1i][ec1j-2]==-ce)))||
+       (B[ec1i][ec1j]==ce)&&((B[ec1i+1][ec1j+1]<0)||(B[ec1i+1][ec1j-1]==ce))&&(((B[ec1i+1][ec1j-2]==ce)||(B[ec1i+2][ec1j]==ce)||(B[ec1i+1][ec1j+1]==ce)||((B[ec1i][ec1j-2]==ce)))))
+       {
+           if((A[ec1i][ec1j]+A[ec1i+2][ec1j-2]==A[ec1i+1][ec1j-1])||((A[ec1i][ec1j]+A[ec1i+2][ec1j]==A[ec1i+1][ec1j-1])||(A[ec1i][ec1j]+A[ec1i+2][ec1j-2]==A[ec1i+1][ec1j+1])||
+            (A[ec1i][ec1j]+A[ec1i+2][ec1j+2]==A[ec1i+1][ec1j+1])||(A[ec1i][ec1j]+A[ec1i][ec1j-2]==A[ec1i+1][ec1j-1])||(A[ec1i][ec1j]+A[ec1i][ec1j+2]==A[ec1i+1][ec1j+1])))
+           {
+                 A[ec2i][ec2j]=A[ec1i][ec1j];
+                 A[ec1i][ec1j]=0;
+                 B[ec2i][ec2j]=B[ec1i][ec1j];
+                 B[ec1i][ec1j]=0;
+           }
+       }
+
+   if((B[ec1i][ec1j]==-ce)&&((B[ec1i+1][ec1j+1]>0)||(B[ec1i+1][ec1j-3]==-tr))&&(((B[ec1i+3][ec1j-1]==-tr)||(B[ec1i+2][ec1j]==-ce)||(B[ec1i+1][ec1j+1]==-ce)||(B[ec1i][ec1j-2]==-ce)))||
+       (B[ec1i][ec1j]==ce)&&((B[ec1i+1][ec1j+1]<0)||(B[ec1i+1][ec1j-3]==tr))&&(((B[ec1i+1][ec1j-2]==tr)||(B[ec1i+2][ec1j]==ce)||(B[ec1i+1][ec1j+1]==ce)||((B[ec1i][ec1j-2]==ce)))))
+       {
+           if((A[ec1i][ec1j]+A[ec1i+2][ec1j-2]==A[ec1i+1][ec1j-1])||((A[ec1i][ec1j]+A[ec1i+2][ec1j]==A[ec1i+1][ec1j-1])||(A[ec1i][ec1j]+A[ec1i+2][ec1j-2]==A[ec1i+1][ec1j+1])||
+            (A[ec1i][ec1j]+A[ec1i+2][ec1j+2]==A[ec1i+1][ec1j+1])||(A[ec1i][ec1j]+A[ec1i][ec1j-2]==A[ec1i+1][ec1j-1])||(A[ec1i][ec1j]+A[ec1i][ec1j+2]==A[ec1i+1][ec1j+1])))
+           {
+                 A[ec2i][ec2j]=A[ec1i][ec1j];
+                 A[ec1i][ec1j]=0;
+                 B[ec2i][ec2j]=B[ec1i][ec1j];
+                 B[ec1i][ec1j]=0;
+           }
+       }
+
+    if((B[ec1i][ec1j]==-ce)&&((B[ec1i+1][ec1j+1]>0)||(B[ec1i+1][ec1j-1]>0))&&((B[ec1i+1][ec1j-4]==-ca)||(B[ec1i+4][ec1j-1]==-ca)||(B[ec1i+4][ec1j+1]==-ca)||(B[ec1i+1][ec1j+4]==-ca))||
+       ((B[ec1i][ec1j]==ce)&&((B[ec1i+1][ec1j+1]<0)||(B[ec1i+1][ec1j-1]<0))&&((B[ec1i+1][ec1j-4]==ca)||(B[ec1i+4][ec1j-1]==ca)||(B[ec1i+4][ec1j+1]==ca)||(B[ec1i+1][ec1j+4]==ca))))
+       {
+           if((A[ec1i][ec1j]+A[ec1i+1][ec1j-4]==A[ec1i+1][ec1j-1])||(A[ec1i][ec1j]+A[ec1i+4][ec1j+1]==A[ec1i+1][ec1j+1])||(A[ec1i][ec1j]+A[ec1i+4][ec1j-1]==A[ec1i+1][ec1j-1])||(A[ec1i][ec1j]+A[ec1i+1][ec1j+4]==A[ec1i+1][ec1j+1]))
+           {
+                 A[ec2i][ec2j]=A[ec1i][ec1j];
+                 A[ec1i][ec1j]=0;
+                 B[ec2i][ec2j]=B[ec1i][ec1j];
+                 B[ec1i][ec1j]=0;
+           }
+       }
+}
+

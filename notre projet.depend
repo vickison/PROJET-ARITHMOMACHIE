@@ -1,0 +1,519 @@
+# depslib dependency file v1.0
+1492591057 source:c:\users\emmanuel\desktop\notre projet\main.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1266126614 c:\program files (x86)\codeblocks-ep\sdk\winbgim\include\graphics.h
+	<windows.h>
+	<limits.h>
+	<sstream>
+
+1492589963 c:\users\emmanuel\desktop\notre projet\headers.h
+
+1492592145 source:c:\users\emmanuel\desktop\notre projet\board.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1492591289 source:c:\users\emmanuel\desktop\notre projet\debut.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496110974 source:c:\users\hp\desktop\new folder (2)\notre projet\debut.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496187580 c:\users\hp\desktop\new folder (2)\notre projet\headers.h
+
+1496349678 source:c:\users\hp\desktop\new folder (2)\notre projet\main.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496406519 source:c:\users\hp\desktop\new folder (2)\notre projet\board.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496404196 source:c:\users\hp\desktop\new folder (2)\notre projet\pion.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1493564988 source:c:\users\hp\desktop\new folder (2)\notre projet\positionnement.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1493708922 source:c:\users\hp\desktop\new folder (2)\notre projet\deplacementpion.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1494117375 source:c:\users\hp\desktop\new folder (2)\notre projet\initialisation.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496406862 source:c:\users\hp\desktop\new folder (2)\notre projet\matassocier.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496406329 source:c:\users\hp\desktop\new folder (2)\notre projet\deplacement.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1494792510 source:c:\users\hp\desktop\new folder (2)\notre projet\voir pixels coordonnee.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1494172446 source:c:\users\hp\desktop\new folder (2)\notre projet\quitter le jeu.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1494973488 source:c:\users\hp\desktop\new folder (2)\notre projet\afficher_pion.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1495785500 source:c:\users\hp\desktop\new folder (2)\notre projet\prise.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496406213 source:c:\users\hp\desktop\new folder (2)\notre projet\blocage.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496396964 source:c:\users\hp\desktop\new folder (2)\notre projet\reafficher board.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496523688 source:c:\users\alias\desktop\notre projet\blocage.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1266123014 c:\users\alias\documents\codeblocks-ep\sdk\winbgim\include\graphics.h
+	<windows.h>
+	<limits.h>
+	<sstream>
+
+1497091248 c:\users\alias\desktop\notre projet\headers.h
+
+1497266787 source:c:\users\alias\desktop\notre projet\board.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1497266658 source:c:\users\alias\desktop\notre projet\debut.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496766849 source:c:\users\alias\desktop\notre projet\deplacement.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+	<windows.h>
+
+1499101922 source:c:\users\alias\desktop\notre projet\main.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1497220755 source:c:\users\alias\desktop\notre projet\matassocier.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496767144 source:c:\users\alias\desktop\notre projet\pion.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1497266266 source:c:\users\alias\desktop\notre projet\quitter le jeu.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496705388 source:c:\users\alias\desktop\notre projet\reafficher pions.c
+
+1497104150 source:c:\users\alias\desktop\notre projet\fonction aider.c
+	<stdio.h>
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1497216927 source:c:\users\alias\desktop\notre projet\prise aritmetique.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1496523688 source:c:\users\alias\desktop\tout\notre projet\blocage.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1497091248 c:\users\alias\desktop\tout\notre projet\headers.h
+
+1497266787 source:c:\users\alias\desktop\tout\notre projet\board.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1497266658 source:c:\users\alias\desktop\tout\notre projet\debut.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496766849 source:c:\users\alias\desktop\tout\notre projet\deplacement.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+	<windows.h>
+
+1497104150 source:c:\users\alias\desktop\tout\notre projet\fonction aider.c
+	<stdio.h>
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1499101922 source:c:\users\alias\desktop\tout\notre projet\main.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1497220755 source:c:\users\alias\desktop\tout\notre projet\matassocier.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496767144 source:c:\users\alias\desktop\tout\notre projet\pion.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1497216927 source:c:\users\alias\desktop\tout\notre projet\prise aritmetique.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1497266266 source:c:\users\alias\desktop\tout\notre projet\quitter le jeu.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496705388 source:c:\users\alias\desktop\tout\notre projet\reafficher pions.c
+
+1496527288 source:d:\users\hp\win10 important\tout\notre projet\blocage.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1497094848 d:\users\hp\win10 important\tout\notre projet\headers.h
+
+1497270387 source:d:\users\hp\win10 important\tout\notre projet\board.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1497270258 source:d:\users\hp\win10 important\tout\notre projet\debut.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496770449 source:d:\users\hp\win10 important\tout\notre projet\deplacement.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+	<windows.h>
+
+1497107750 source:d:\users\hp\win10 important\tout\notre projet\fonction aider.c
+	<stdio.h>
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1521233918 source:d:\users\hp\win10 important\tout\notre projet\main.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1497224355 source:d:\users\hp\win10 important\tout\notre projet\matassocier.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496770744 source:d:\users\hp\win10 important\tout\notre projet\pion.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1497220527 source:d:\users\hp\win10 important\tout\notre projet\prise aritmetique.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1497269866 source:d:\users\hp\win10 important\tout\notre projet\quitter le jeu.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496708988 source:d:\users\hp\win10 important\tout\notre projet\reafficher pions.c
+
+1496523688 source:c:\users\hp\desktop\notre projet\blocage.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1497091248 c:\users\hp\desktop\notre projet\headers.h
+
+1497266787 source:c:\users\hp\desktop\notre projet\board.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1497266658 source:c:\users\hp\desktop\notre projet\debut.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496766849 source:c:\users\hp\desktop\notre projet\deplacement.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+	<windows.h>
+
+1497104150 source:c:\users\hp\desktop\notre projet\fonction aider.c
+	<stdio.h>
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1521230318 source:c:\users\hp\desktop\notre projet\main.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1497220755 source:c:\users\hp\desktop\notre projet\matassocier.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496767144 source:c:\users\hp\desktop\notre projet\pion.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1497216927 source:c:\users\hp\desktop\notre projet\prise aritmetique.c
+	<graphics.h>
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	"headers.h"
+
+1497266266 source:c:\users\hp\desktop\notre projet\quitter le jeu.c
+	<stdio.h>
+	<graphics.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+	"headers.h"
+
+1496705388 source:c:\users\hp\desktop\notre projet\reafficher pions.c
+
